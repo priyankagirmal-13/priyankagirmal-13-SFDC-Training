@@ -1,0 +1,12 @@
+<apex:page controller="AccountVFController">
+<apex:pageBlock >
+<apex:pageBlockSection title="Job Type Details" columns="3" showHeader="true">
+<c:secondComponunt records2="{!records2}" fields="{!fields2}"></c:secondComponunt>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="candidate list" showHeader="true">
+<c:RelatedListComponunt records="{!records}" fields="{!fields}"></c:RelatedListComponunt> 
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+
+</apex:page>

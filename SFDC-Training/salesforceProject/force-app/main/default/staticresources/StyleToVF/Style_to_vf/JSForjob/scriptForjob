@@ -1,0 +1,4 @@
+<script>
+function validateFunction(requriedskillId)
+{
+var inputRS=document

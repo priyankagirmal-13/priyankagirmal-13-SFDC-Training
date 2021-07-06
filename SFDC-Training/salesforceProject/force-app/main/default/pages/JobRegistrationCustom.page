@@ -1,0 +1,37 @@
+<apex:page controller="CmForInsertJob" standardStylesheets="false" showHeader="false">
+    
+    <apex:includeScript value="{!URLFOR($Resource.StyleToVF,'Style_to_vf/JSForjob/scriptForjob.js')}"/>
+    
+    <!--<apex:includeScript value="{! $Resource.JobJavaScript}"/>-->
+    
+    <center><apex:image url="{!URLFOR($Resource.StyleToVF,'Style_to_vf/Images/EnzigmaImg.png')}"></apex:image></center>
+    
+    <apex:stylesheet value="{!URLFOR($Resource.StyleToVF,'Style_to_vf/cssExample/cssExample.css')}"/>
+    <h1>
+        <u><i>Job Registrartion Step1</i></u>
+    </h1>
+    
+    <center><apex:form styleclass="form1-div" id="frm1">
+        <apex:pageBlock id="pb">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="save" action="{!save}" styleclass="button1" onclick="return validate('{!$Component.frm1.pb.Pbs.type}','{!$Component.frm1.pb.Pbs.certificationId}');"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1" id="Pbs">
+                <apex:inputField value="{!job.Job_Types__c}" id="type"/> <br/>
+                <apex:inputField value="{!job.Required_Skill__c}" id="Rid"/>  <br/>   
+                <apex:inputField value="{!job.Qualification_Required__c}" Id="QualificationId" />  <br/>
+                <apex:inputField value="{!job.Certification_Required__c}" Id="certificationId" />  <br/>
+                <apex:inputField value="{!job.Active__c}" id="check"/> <br/>
+                <apex:inputField value="{!job.Manager__c}" id="manager"/> <br/>
+                <apex:inputField value="{!job.Number_of_Positions__c}" id="No_Of_Pos"/> <br/>
+                <apex:inputField value="{!job.Expires_On__c}" id="date"/> <br/>
+                <apex:inputField value="{!job.Salary_Offered__c}" id="salary"/><br/>
+                <apex:inputField value="{!job.Description__c}" /> <br/>
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+        </apex:form></center>
+    
+    
+</apex:page>
